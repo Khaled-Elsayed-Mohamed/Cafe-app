@@ -115,7 +115,7 @@ The following patterns are forbidden in all production code:
 | Hardcoded values | Not configurable; not injectable | Inject via constructor or Config struct |
 | Copy-paste code | Maintenance nightmare | Extract to reusable components |
 | UIKit (when SwiftUI available) | Legacy; harder to test | SwiftUI |
-| Firebase imports in Domain layer | Couples logic to framework | Protocol abstraction in Data layer |
+| Firebase/Square imports in Domain layer | Couples logic to framework | Protocol abstraction in Data layer |
 | Async callbacks / Combine | Hard to test; callback hell | async/await |
 
 **Every PR MUST pass this checklist before merge**:
