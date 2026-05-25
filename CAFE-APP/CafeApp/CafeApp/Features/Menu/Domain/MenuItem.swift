@@ -1,0 +1,25 @@
+import Foundation
+
+struct MenuItem: Identifiable, Codable {
+    let id: String
+    let name: String
+    let description: String
+    let inStorePrice: Double
+    let appPrice: Double?
+    let isAppOnly: Bool
+    let allergens: [String]
+    let pointValue: Int
+    let category: MenuCategory
+    let isAvailable: Bool
+}
+
+enum MenuCategory: String, CaseIterable, Codable {
+    case coffee  = "Coffee"
+    case food    = "Food"
+    case drinks  = "Drinks"
+    case pastry  = "Pastry"
+}
+
+extension MenuItem {
+    var effectiveAppPrice: Double { appPrice ?? inStorePrice }
+}

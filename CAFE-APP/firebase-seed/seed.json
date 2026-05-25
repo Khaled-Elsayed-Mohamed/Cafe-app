@@ -1,0 +1,126 @@
+{
+  "menu_items": {
+    "item001": {
+      "id": "item001",
+      "name": "Espresso",
+      "description": "Rich single or double shot of espresso",
+      "inStorePrice": 3.50,
+      "appPrice": 3.25,
+      "isAppOnly": false,
+      "allergens": ["dairy"],
+      "pointValue": 5,
+      "category": "Coffee",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item002": {
+      "id": "item002",
+      "name": "Cappuccino",
+      "description": "Espresso with steamed milk foam",
+      "inStorePrice": 5.00,
+      "appPrice": 4.75,
+      "isAppOnly": false,
+      "allergens": ["dairy"],
+      "pointValue": 8,
+      "category": "Coffee",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item003": {
+      "id": "item003",
+      "name": "Latte",
+      "description": "Espresso with steamed milk — smooth and creamy",
+      "inStorePrice": 5.50,
+      "appPrice": 5.00,
+      "isAppOnly": false,
+      "allergens": ["dairy"],
+      "pointValue": 10,
+      "category": "Coffee",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item004": {
+      "id": "item004",
+      "name": "App-Only Cold Brew",
+      "description": "24-hour cold brew concentrate — exclusive to app orders",
+      "inStorePrice": 6.50,
+      "appPrice": 5.50,
+      "isAppOnly": true,
+      "allergens": [],
+      "pointValue": 12,
+      "category": "Coffee",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item005": {
+      "id": "item005",
+      "name": "Avocado Toast",
+      "description": "Sourdough toast with smashed avocado, chilli flakes, and lemon",
+      "inStorePrice": 9.50,
+      "appPrice": null,
+      "isAppOnly": false,
+      "allergens": ["gluten"],
+      "pointValue": 15,
+      "category": "Food",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item006": {
+      "id": "item006",
+      "name": "Croissant",
+      "description": "Buttery classic croissant, baked fresh daily",
+      "inStorePrice": 4.00,
+      "appPrice": null,
+      "isAppOnly": false,
+      "allergens": ["gluten", "dairy"],
+      "pointValue": 6,
+      "category": "Pastry",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item007": {
+      "id": "item007",
+      "name": "Fresh Orange Juice",
+      "description": "Freshly squeezed OJ — served chilled",
+      "inStorePrice": 4.50,
+      "appPrice": null,
+      "isAppOnly": false,
+      "allergens": [],
+      "pointValue": 7,
+      "category": "Drinks",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    },
+    "item008": {
+      "id": "item008",
+      "name": "Blueberry Muffin",
+      "description": "Moist blueberry muffin with a crunchy sugar top",
+      "inStorePrice": 3.75,
+      "appPrice": null,
+      "isAppOnly": false,
+      "allergens": ["gluten", "dairy"],
+      "pointValue": 5,
+      "category": "Pastry",
+      "isAvailable": true,
+      "createdAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"},
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    }
+  },
+  "cafe_config": {
+    "default": {
+      "openTime": "07:00",
+      "closeTime": "20:00",
+      "orderCutoffMinutes": 15,
+      "orderTimeoutMinutes": 120,
+      "timezone": "Australia/Sydney",
+      "updatedAt": {"__datatype__": "timestamp", "value": "2026-01-01T00:00:00Z"}
+    }
+  }
+}

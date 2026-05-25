@@ -1,0 +1,80 @@
+name: CafeApp
+options:
+  bundleIdPrefix: com.cafeapp
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+
+packages:
+  firebase-ios-sdk:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 11.0.0
+
+targets:
+  CafeApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CafeApp
+    info:
+      path: CafeApp/Info.plist
+      properties:
+        CFBundleDisplayName: CafeApp
+        CFBundleIdentifier: com.cafeapp.CafeApp
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.0"
+        UILaunchStoryboardName: ""
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        SQUARE_APPLICATION_ID: "$(SQUARE_APPLICATION_ID)"
+        NSCameraUsageDescription: "Used to scan membership QR codes"
+        UIBackgroundModes:
+          - remote-notification
+    settings:
+      base:
+        SWIFT_VERSION: "5.10"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        PRODUCT_BUNDLE_IDENTIFIER: com.cafeapp.CafeApp
+        DEVELOPMENT_TEAM: ""
+        SQUARE_APPLICATION_ID: ""
+    dependencies:
+      - package: firebase-ios-sdk
+        product: FirebaseAuth
+      - package: firebase-ios-sdk
+        product: FirebaseFirestore
+      - package: firebase-ios-sdk
+        product: FirebaseMessaging
+
+  CafeAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CafeAppTests
+    settings:
+      base:
+        SWIFT_VERSION: "5.10"
+        PRODUCT_BUNDLE_IDENTIFIER: com.cafeapp.CafeAppTests
+    dependencies:
+      - target: CafeApp
+
+  CafeAppIntegrationTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: CafeAppIntegrationTests
+    settings:
+      base:
+        SWIFT_VERSION: "5.10"
+        PRODUCT_BUNDLE_IDENTIFIER: com.cafeapp.CafeAppIntegrationTests
+    dependencies:
+      - target: CafeApp
+      - package: firebase-ios-sdk
+        product: FirebaseAuth
+      - package: firebase-ios-sdk
+        product: FirebaseFirestore

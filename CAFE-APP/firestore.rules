@@ -1,0 +1,75 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Menu Items ──────────────────────────────────────────────────────────
+    // Public read; owner write only
+    match /menu_items/{itemId} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.token.role == 'owner';
+    }
+
+    // ── Customers ───────────────────────────────────────────────────────────
+    // UID-matched read/write only
+    match /customers/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // ── Loyalty Accounts ────────────────────────────────────────────────────
+    // UID-matched read; Cloud Functions write only (server token)
+    match /loyalty_accounts/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false; // Cloud Functions only (admin SDK bypasses rules)
+    }
+
+    // ── Point Transactions ──────────────────────────────────────────────────
+    // customerId-matched read; Cloud Functions write only
+    match /point_transactions/{transactionId} {
+      allow read: if request.auth != null
+        && request.auth.uid == resource.data.customerId;
+      allow write: if false; // Cloud Functions only
+    }
+
+    // ── Rewards ─────────────────────────────────────────────────────────────
+    // customerId-matched read; customer can update redemptionStatus/redeemedAt only
+    match /rewards/{rewardId} {
+      allow read: if request.auth != null
+        && request.auth.uid == resource.data.customerId;
+      allow update: if request.auth != null
+        && request.auth.uid == resource.data.customerId
+        && request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['redemptionStatus', 'redeemedAt']);
+      allow create, delete: if false; // Cloud Functions only
+    }
+
+    // ── Orders ───────────────────────────────────────────────────────────────
+    // Customer creates; customer + staff read; staff + Cloud Functions update
+    match /orders/{orderId} {
+      allow create: if request.auth != null
+        && request.auth.token.role == 'customer';
+      allow read: if request.auth != null
+        && (request.auth.uid == resource.data.customerId
+            || request.auth.token.role == 'worker'
+            || request.auth.token.role == 'owner');
+      allow update: if request.auth != null
+        && (request.auth.token.role == 'worker'
+            || request.auth.token.role == 'owner');
+      allow delete: if false;
+    }
+
+    // ── Café Config ──────────────────────────────────────────────────────────
+    // Public read; owner write only
+    match /cafe_config/{configId} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.token.role == 'owner';
+    }
+
+    // ── Staff ────────────────────────────────────────────────────────────────
+    // UID-matched read/write; role field is immutable by self
+    match /staff/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}

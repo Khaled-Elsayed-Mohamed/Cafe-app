@@ -1,0 +1,1167 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03EC4CDB2A752EE7AD39E5FE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55811DA67531F89BB23C1B3 /* RegisterView.swift */; };
+		11899AFC6DC748D3CD82518D /* FetchLoyaltyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22DB02ACEB535954F0AFDD6 /* FetchLoyaltyUseCase.swift */; };
+		1537F64AF31AB59B784C9649 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5937F2FD292AF1915F0E7 /* RegisterUseCase.swift */; };
+		160B1FFA3E26F1DDE8CEF9A6 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E32CD2714C2D35183E8764 /* MenuView.swift */; };
+		174F4520557CB814AA7C3EAE /* FirebaseCafeConfigRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69824BF0648617459502B036 /* FirebaseCafeConfigRepository.swift */; };
+		18DEE7D96694D616D6EE4E65 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9F86012B88FD8DE7C81D2 /* CheckoutView.swift */; };
+		192E2463423C3D5B199915D7 /* Date+CafeHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC461482B8CB74D562C1E84B /* Date+CafeHours.swift */; };
+		1A524D1A7DA7BBB8A451601F /* MockAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D7E680F01B6E37C403802E /* MockAuthRepository.swift */; };
+		1CE65F96C8B6213DAC18A0E5 /* LoyaltyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD77958E20C8AF8E8EC1EA6 /* LoyaltyRepository.swift */; };
+		22D27AD99627B771BC72238B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35B2B0B778917D0F4042D1 /* LoginView.swift */; };
+		2BF1921D2C98A02C3BDD0CCE /* FirebaseOrderRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F68EFE5D78AEE86D69F3 /* FirebaseOrderRepositoryTests.swift */; };
+		2BFAB0C928D15B15581FCB28 /* Pods_CafeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845ACB4508D2F10B7323143A /* Pods_CafeApp.framework */; };
+		2C1D03302CB2EAACFE3A6A68 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09F14009C59974D72B0F80 /* OrderViewModel.swift */; };
+		2CC17CD6F7A40B5C2459E981 /* WorkerOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6D34FF25752C80450BD96 /* WorkerOrderRepository.swift */; };
+		2FB2EABDBA609930183BE307 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88269F58D49C561CCA56E203 /* AuthRepository.swift */; };
+		30CDC723C0BED0B8160694F9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE219CE416057EDF872B789 /* KeychainManager.swift */; };
+		3CA77DAE7FBDB89B91DE22AA /* WorkerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A24553903DC876602136E4 /* WorkerDashboardView.swift */; };
+		3DCFCD98218D73897A1DBE3F /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85182F9A6379258F31067E3 /* AuthUser.swift */; };
+		4394A6425DBE0CBFB2C39C6B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C612628AE9ADC675C5A9F626 /* FirebaseFirestore */; };
+		4DDB99E80011C2E294C55A31 /* FirebaseLoyaltyRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB119C02F6E4ECBA4785414 /* FirebaseLoyaltyRepositoryTests.swift */; };
+		513FA3FE0F292B64D45C28B0 /* MockOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942429C1251B4F2C8A5D08FC /* MockOrderRepository.swift */; };
+		54F02EFB8B1BC6BA95C13532 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66875FBF6249D728A655CE04 /* Order.swift */; };
+		56CEDAEBF290BD59CC65873D /* NetworkMonitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE98264BDC3F8C7C69AFE /* NetworkMonitorRepository.swift */; };
+		5856F5447F8A75BD2314640E /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5EB9CB8379C5D177ADDA5 /* MenuItemDetailView.swift */; };
+		59C9B638517872B6BD6C36EA /* NWNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912404B1985C94B997DD28E /* NWNetworkMonitor.swift */; };
+		5A235D8B6627222955291E0A /* SquareInAppPaymentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5FF4DE438BBB032F95C17 /* SquareInAppPaymentRepository.swift */; };
+		63D70D5502DD0ED976A8C539 /* CafeConfigRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D922B42215B9B5F0CAFCF93 /* CafeConfigRepository.swift */; };
+		648323A4EE3ABED124B30CB1 /* OrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD06B6B7982129D0ACF7 /* OrderRepository.swift */; };
+		65F8CF96FCD0371A58B3E11E /* OrderTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828211CE24FB2C839EAEB47B /* OrderTrackingView.swift */; };
+		6CB2C27005208E18293EEBB2 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E6A0A8DE3F70AC5F2509FF /* NotificationRepository.swift */; };
+		7591AAB13F72AE960DA8762A /* FCMNotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E137B2AD8404C4B2C0913 /* FCMNotificationRepository.swift */; };
+		783AA49B3BEE77318B9A4775 /* MockNetworkMonitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F9B496FB60C40344E18B6 /* MockNetworkMonitorRepository.swift */; };
+		85BCF25AD1539A660E8ACC31 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B0B5DF85204169A561C5 /* MenuItem.swift */; };
+		8E0A7453068D1847B91B80ED /* MockPaymentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326BCD4CA21381C52D6054A /* MockPaymentRepository.swift */; };
+		8E53E4135DDE7A3577E4DBF1 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AE878AEC4BD03AB79999DC /* RewardsView.swift */; };
+		920E2981E215249B29786CE7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 73605C5431C8F1084214E735 /* FirebaseMessaging */; };
+		9291442BAB7D57259753B0F2 /* RegisterNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40A332ACDC6D24248ED88B /* RegisterNotificationUseCase.swift */; };
+		9390C171562D05BA37C541B2 /* WorkerOrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3524E90E517E4B8B47278 /* WorkerOrderDetailView.swift */; };
+		980DBB1FB3464998BF8C11BE /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125293E621BA2F24A623C129 /* CartView.swift */; };
+		9969B31683141232B7CF3C6B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503205640D4D28AD5F634F3F /* AuthViewModel.swift */; };
+		9C17DC042177CDDCB3D1E256 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9128CFDE8D900A961E88AA07 /* NotificationSettingsView.swift */; };
+		9F18C4762AF3050383A20D36 /* RedeemRewardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661858F2DE074F7E30E54351 /* RedeemRewardUseCase.swift */; };
+		A921BA3F1591FD3CB745CB91 /* LoyaltyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7DD995F71BF28F7DDAF3D /* LoyaltyViewModel.swift */; };
+		AF44DBECA978B040D68909AF /* DependencyContainer+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42772345339E16A455DE893B /* DependencyContainer+Mock.swift */; };
+		B225B4856B7B45CF5CAE3D45 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40AC733A2BC5BBB35884D6 /* Reward.swift */; };
+		B47D522A9FCB7456C64FACAF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2FF2570AA22B3A2C46736F /* ProfileView.swift */; };
+		B8F9DD4DF646238178A49F44 /* MockWorkerOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439EE02C3E29D8D6B52B9111 /* MockWorkerOrderRepository.swift */; };
+		BEF5D7E5AAC7E33693AC0D9F /* MockLoyaltyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68DD316CA0685FEFB03A0A /* MockLoyaltyRepository.swift */; };
+		C1CD74F57367665AB331C97E /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41227B86E668FB1947BE94FE /* BarcodeView.swift */; };
+		C7723964384EFEFCF0C24E59 /* FirebaseMenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35C773ABBEEA938CA45AD0 /* FirebaseMenuRepository.swift */; };
+		CB0D87D4FEF634A65EF2B572 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A52B86CECAD4D7F14B85BA28 /* FirebaseFirestore */; };
+		CCEB52E042963F3E88DE3F65 /* CafeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA8334FFBEC8D8B8ECD06B3 /* CafeAppApp.swift */; };
+		CF8BED19FF6FC739C1F1A767 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33326DFE478507F618D2BBE6 /* DependencyContainer.swift */; };
+		D01A6F9F9E8BAD3A7C04653B /* LoyaltyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A350B9781E915209692C70 /* LoyaltyAccount.swift */; };
+		D4AE038CA3C2BE7ADD16965B /* FirebaseMenuRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20635FA61B50B9ABCF116E77 /* FirebaseMenuRepositoryTests.swift */; };
+		D5B34F8B2A5444924E14F403 /* FirebaseLoyaltyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F3196A3F30A8B0403D1017 /* FirebaseLoyaltyRepository.swift */; };
+		D5BA705A4D8E96B9EF97E365 /* WorkerOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD26AEB8E0A2ECCFCED1290 /* WorkerOrderViewModel.swift */; };
+		D6F00638E1CCA7B5F9CD6126 /* FulfillOrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553972416C2B95BA02EF361 /* FulfillOrderUseCase.swift */; };
+		D91727085C362F5511968438 /* FetchMenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695F6F273F3B0FA7E3214F0B /* FetchMenuUseCase.swift */; };
+		DB333C95DB21001973DD5927 /* PlaceOrderUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82F15A7251C20869DE44DDE /* PlaceOrderUseCase.swift */; };
+		DD2B92B5A415ED9FC32E1587 /* MockCafeConfigRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1BEB00E7E01C373CF0802 /* MockCafeConfigRepository.swift */; };
+		DDAA35D8244E6226FEEE456A /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406422076E5627C910F9B99 /* MenuRepository.swift */; };
+		DEBEDC2BFB9F7F43DF0DD0C1 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113F522C16AB14F44066E42C /* OrderItem.swift */; };
+		E13347F127A54FA4FC94DB55 /* OrderConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59FEC4A9B19C9672BC8684 /* OrderConfirmationView.swift */; };
+		E269A13309D20DDA1C5A0064 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18EEDAB5A9E6D2DF44DA0F1 /* MenuViewModel.swift */; };
+		EA1AC1DA3C424F4A60B03E01 /* FirebaseOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AB6D517F1937DFC04F80D /* FirebaseOrderRepository.swift */; };
+		ED7342FFA456D55DAA75B041 /* MockNotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DF975E9D38B95C5670697A /* MockNotificationRepository.swift */; };
+		EEB5DF3BAFC0C8C514CD4718 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDF6DC218030C874F8B0FDF3 /* FirebaseAuth */; };
+		EFDAC5AE183859107E8B79EE /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C25431036C3FAD1E1393E /* SignInUseCase.swift */; };
+		EFE73AE4EE856DD8E5D2B4C6 /* PaymentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC31E5008CF4D2305838322 /* PaymentRepository.swift */; };
+		F048F3DAA233912332CE8470 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A08FA28493AECCFB22B2CF /* GoogleService-Info.plist */; };
+		F26A893FFC793ABBD38BEC7B /* FirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9863AC9AC4DAE6E7E6F7F09 /* FirebaseAuthRepository.swift */; };
+		F2F2EF4BAB96F14E0A61B674 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E179B6204A571738E3EBEB7E /* FirebaseAuth */; };
+		F34DDF56C13B911DB9CCABFE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ECA8750DE1F56CF4715D09 /* Config.swift */; };
+		F47A372757268160C9B267A4 /* CafeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8009ACD509EFA2F0E4345B8A /* CafeConfig.swift */; };
+		F74C2B3FCD1B2A13C2C7E1B6 /* FirebaseWorkerOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EADCA77AAB6FB6E9D94C460 /* FirebaseWorkerOrderRepository.swift */; };
+		FA6E2D964A74377F02B4DE90 /* MockMenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F4E204A6322F71834AEF /* MockMenuRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C467157687C6B7661117E6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18B5369C72CF75B016529763 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867A302C0A1266C0446B3437;
+			remoteInfo = CafeApp;
+		};
+		ABF7779D76AD67C873B04806 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18B5369C72CF75B016529763 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 867A302C0A1266C0446B3437;
+			remoteInfo = CafeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01A350B9781E915209692C70 /* LoyaltyAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyAccount.swift; sourceTree = "<group>"; };
+		01DF975E9D38B95C5670697A /* MockNotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationRepository.swift; sourceTree = "<group>"; };
+		01E5937F2FD292AF1915F0E7 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		022C25431036C3FAD1E1393E /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
+		0912404B1985C94B997DD28E /* NWNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWNetworkMonitor.swift; sourceTree = "<group>"; };
+		0964E99DF9BC260ED7226BDF /* CafeAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CafeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C40A332ACDC6D24248ED88B /* RegisterNotificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNotificationUseCase.swift; sourceTree = "<group>"; };
+		113F522C16AB14F44066E42C /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		125293E621BA2F24A623C129 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		13A24553903DC876602136E4 /* WorkerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerDashboardView.swift; sourceTree = "<group>"; };
+		19ECA8750DE1F56CF4715D09 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		1CD26AEB8E0A2ECCFCED1290 /* WorkerOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerOrderViewModel.swift; sourceTree = "<group>"; };
+		1D922B42215B9B5F0CAFCF93 /* CafeConfigRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeConfigRepository.swift; sourceTree = "<group>"; };
+		1E35C773ABBEEA938CA45AD0 /* FirebaseMenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMenuRepository.swift; sourceTree = "<group>"; };
+		20635FA61B50B9ABCF116E77 /* FirebaseMenuRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMenuRepositoryTests.swift; sourceTree = "<group>"; };
+		24F7DD995F71BF28F7DDAF3D /* LoyaltyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyViewModel.swift; sourceTree = "<group>"; };
+		33326DFE478507F618D2BBE6 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		3406422076E5627C910F9B99 /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
+		3553972416C2B95BA02EF361 /* FulfillOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FulfillOrderUseCase.swift; sourceTree = "<group>"; };
+		35D9F86012B88FD8DE7C81D2 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		3A73F68EFE5D78AEE86D69F3 /* FirebaseOrderRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOrderRepositoryTests.swift; sourceTree = "<group>"; };
+		3A936A6AFC98990138EDBD09 /* Pods-CafeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp.debug.xcconfig"; path = "Target Support Files/Pods-CafeApp/Pods-CafeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3C68DD316CA0685FEFB03A0A /* MockLoyaltyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoyaltyRepository.swift; sourceTree = "<group>"; };
+		41227B86E668FB1947BE94FE /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
+		42772345339E16A455DE893B /* DependencyContainer+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+Mock.swift"; sourceTree = "<group>"; };
+		439EE02C3E29D8D6B52B9111 /* MockWorkerOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkerOrderRepository.swift; sourceTree = "<group>"; };
+		501F9B496FB60C40344E18B6 /* MockNetworkMonitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkMonitorRepository.swift; sourceTree = "<group>"; };
+		503205640D4D28AD5F634F3F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		57E6A0A8DE3F70AC5F2509FF /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
+		59D7E680F01B6E37C403802E /* MockAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthRepository.swift; sourceTree = "<group>"; };
+		5C09F14009C59974D72B0F80 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		5EADCA77AAB6FB6E9D94C460 /* FirebaseWorkerOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWorkerOrderRepository.swift; sourceTree = "<group>"; };
+		64E5EB9CB8379C5D177ADDA5 /* MenuItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailView.swift; sourceTree = "<group>"; };
+		660AB6D517F1937DFC04F80D /* FirebaseOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOrderRepository.swift; sourceTree = "<group>"; };
+		661858F2DE074F7E30E54351 /* RedeemRewardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemRewardUseCase.swift; sourceTree = "<group>"; };
+		66875FBF6249D728A655CE04 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		695F6F273F3B0FA7E3214F0B /* FetchMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMenuUseCase.swift; sourceTree = "<group>"; };
+		69824BF0648617459502B036 /* FirebaseCafeConfigRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCafeConfigRepository.swift; sourceTree = "<group>"; };
+		6CA8334FFBEC8D8B8ECD06B3 /* CafeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAppApp.swift; sourceTree = "<group>"; };
+		6E59FEC4A9B19C9672BC8684 /* OrderConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationView.swift; sourceTree = "<group>"; };
+		6FC31E5008CF4D2305838322 /* PaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRepository.swift; sourceTree = "<group>"; };
+		7BEDA7761B8439A2D768CBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7F33B0B5DF85204169A561C5 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		8009ACD509EFA2F0E4345B8A /* CafeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeConfig.swift; sourceTree = "<group>"; };
+		828211CE24FB2C839EAEB47B /* OrderTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingView.swift; sourceTree = "<group>"; };
+		82F3196A3F30A8B0403D1017 /* FirebaseLoyaltyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoyaltyRepository.swift; sourceTree = "<group>"; };
+		845ACB4508D2F10B7323143A /* Pods_CafeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88269F58D49C561CCA56E203 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		8CB119C02F6E4ECBA4785414 /* FirebaseLoyaltyRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoyaltyRepositoryTests.swift; sourceTree = "<group>"; };
+		8DED3634F657F78DE09CAB17 /* CafeApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DF3524E90E517E4B8B47278 /* WorkerOrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerOrderDetailView.swift; sourceTree = "<group>"; };
+		9128CFDE8D900A961E88AA07 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
+		9326BCD4CA21381C52D6054A /* MockPaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPaymentRepository.swift; sourceTree = "<group>"; };
+		942429C1251B4F2C8A5D08FC /* MockOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOrderRepository.swift; sourceTree = "<group>"; };
+		9D2FF2570AA22B3A2C46736F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9F35B2B0B778917D0F4042D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A22DB02ACEB535954F0AFDD6 /* FetchLoyaltyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLoyaltyUseCase.swift; sourceTree = "<group>"; };
+		A27E137B2AD8404C4B2C0913 /* FCMNotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMNotificationRepository.swift; sourceTree = "<group>"; };
+		A48C011794D104E339668EE7 /* Pods-CafeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp.release.xcconfig"; path = "Target Support Files/Pods-CafeApp/Pods-CafeApp.release.xcconfig"; sourceTree = "<group>"; };
+		A55811DA67531F89BB23C1B3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		A85182F9A6379258F31067E3 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		AC461482B8CB74D562C1E84B /* Date+CafeHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CafeHours.swift"; sourceTree = "<group>"; };
+		AE7BE98264BDC3F8C7C69AFE /* NetworkMonitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorRepository.swift; sourceTree = "<group>"; };
+		BAE219CE416057EDF872B789 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		BF40AC733A2BC5BBB35884D6 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		C038CD06B6B7982129D0ACF7 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
+		C18EEDAB5A9E6D2DF44DA0F1 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		C5AE878AEC4BD03AB79999DC /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
+		CE36F4E204A6322F71834AEF /* MockMenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMenuRepository.swift; sourceTree = "<group>"; };
+		D5E1BEB00E7E01C373CF0802 /* MockCafeConfigRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCafeConfigRepository.swift; sourceTree = "<group>"; };
+		D82F15A7251C20869DE44DDE /* PlaceOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderUseCase.swift; sourceTree = "<group>"; };
+		E0B795A204DDF2F2107F256F /* CafeAppIntegrationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CafeAppIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A08FA28493AECCFB22B2CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9863AC9AC4DAE6E7E6F7F09 /* FirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepository.swift; sourceTree = "<group>"; };
+		E9E5FF4DE438BBB032F95C17 /* SquareInAppPaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareInAppPaymentRepository.swift; sourceTree = "<group>"; };
+		EAD77958E20C8AF8E8EC1EA6 /* LoyaltyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyRepository.swift; sourceTree = "<group>"; };
+		EDD6D34FF25752C80450BD96 /* WorkerOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerOrderRepository.swift; sourceTree = "<group>"; };
+		F6E32CD2714C2D35183E8764 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A768E77E88DAB62990A1377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2F2EF4BAB96F14E0A61B674 /* FirebaseAuth in Frameworks */,
+				CB0D87D4FEF634A65EF2B572 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C424E9D8262D6F18BAED63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEB5DF3BAFC0C8C514CD4718 /* FirebaseAuth in Frameworks */,
+				4394A6425DBE0CBFB2C39C6B /* FirebaseFirestore in Frameworks */,
+				920E2981E215249B29786CE7 /* FirebaseMessaging in Frameworks */,
+				2BFAB0C928D15B15581FCB28 /* Pods_CafeApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08A050CA36472D52770CD38C /* CafeAppIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCD707551781609E33F25957 /* Firebase */,
+			);
+			path = CafeAppIntegrationTests;
+			sourceTree = "<group>";
+		};
+		0B0D75317BBEC5EB8AB57098 /* CafeApp */ = {
+			isa = PBXGroup;
+			children = (
+				E1A08FA28493AECCFB22B2CF /* GoogleService-Info.plist */,
+				7BEDA7761B8439A2D768CBAA /* Info.plist */,
+				7B3E2D9A224F5964067C5FB0 /* App */,
+				F920E03EB8A8E0C560F4E467 /* Core */,
+				F1311FC46016DAF85EF20429 /* Features */,
+			);
+			path = CafeApp;
+			sourceTree = "<group>";
+		};
+		10B290709B8119FCE7BD37BB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				57E6A0A8DE3F70AC5F2509FF /* NotificationRepository.swift */,
+				0C40A332ACDC6D24248ED88B /* RegisterNotificationUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		10C008160F20A10946A2F67E /* CafeConfig */ = {
+			isa = PBXGroup;
+			children = (
+				8009ACD509EFA2F0E4345B8A /* CafeConfig.swift */,
+				1D922B42215B9B5F0CAFCF93 /* CafeConfigRepository.swift */,
+				69824BF0648617459502B036 /* FirebaseCafeConfigRepository.swift */,
+			);
+			path = CafeConfig;
+			sourceTree = "<group>";
+		};
+		1F6FDAAC24A5669B91E3E9D3 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				91F97E70A617E5D85E8B1A09 /* Data */,
+				D09CB6651503ACB79AE43AB5 /* Domain */,
+				323F0A25E8EFA37FC2887061 /* Presentation */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		2758A7468B0C4E2F83C9F5DF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				82F3196A3F30A8B0403D1017 /* FirebaseLoyaltyRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2B0139DC4A8EB68F0C2235B2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AE7BE98264BDC3F8C7C69AFE /* NetworkMonitorRepository.swift */,
+				0912404B1985C94B997DD28E /* NWNetworkMonitor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		323F0A25E8EFA37FC2887061 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				64E5EB9CB8379C5D177ADDA5 /* MenuItemDetailView.swift */,
+				F6E32CD2714C2D35183E8764 /* MenuView.swift */,
+				C18EEDAB5A9E6D2DF44DA0F1 /* MenuViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		36E8D2FC8C1171A23C63FBA2 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				BDC39217BB753C0E3D429479 /* Data */,
+				60D8EF5B6ADD5A9EAE55A470 /* Domain */,
+				C30008AAFDD345CA9077AE18 /* Presentation */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		3E47CDFC05F8CFBF6D18ED91 = {
+			isa = PBXGroup;
+			children = (
+				0B0D75317BBEC5EB8AB57098 /* CafeApp */,
+				08A050CA36472D52770CD38C /* CafeAppIntegrationTests */,
+				CB26CC8954EFE4CD4ED60C42 /* CafeAppTests */,
+				86332B78FB02A84D8968FAD9 /* Products */,
+				9F0DB860BB2D066E1954FA6D /* Pods */,
+				B87A7BD446B98BC730076E21 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		471CDE9F32D3DC557AD85AB9 /* Loyalty */ = {
+			isa = PBXGroup;
+			children = (
+				2758A7468B0C4E2F83C9F5DF /* Data */,
+				611747A6C516F1609F682C9C /* Domain */,
+				B9176901D683B46AAAFA33F1 /* Presentation */,
+			);
+			path = Loyalty;
+			sourceTree = "<group>";
+		};
+		4DECCFDE9269F4516602D0F7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				503205640D4D28AD5F634F3F /* AuthViewModel.swift */,
+				9F35B2B0B778917D0F4042D1 /* LoginView.swift */,
+				A55811DA67531F89BB23C1B3 /* RegisterView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		50A20E72606D2865EA9EACFD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				42772345339E16A455DE893B /* DependencyContainer+Mock.swift */,
+				59D7E680F01B6E37C403802E /* MockAuthRepository.swift */,
+				D5E1BEB00E7E01C373CF0802 /* MockCafeConfigRepository.swift */,
+				3C68DD316CA0685FEFB03A0A /* MockLoyaltyRepository.swift */,
+				CE36F4E204A6322F71834AEF /* MockMenuRepository.swift */,
+				501F9B496FB60C40344E18B6 /* MockNetworkMonitorRepository.swift */,
+				01DF975E9D38B95C5670697A /* MockNotificationRepository.swift */,
+				942429C1251B4F2C8A5D08FC /* MockOrderRepository.swift */,
+				9326BCD4CA21381C52D6054A /* MockPaymentRepository.swift */,
+				439EE02C3E29D8D6B52B9111 /* MockWorkerOrderRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		568D2AA7069277446FF5211D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC461482B8CB74D562C1E84B /* Date+CafeHours.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F8D2F7DD26F42C58804DA38 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5EADCA77AAB6FB6E9D94C460 /* FirebaseWorkerOrderRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		60D8EF5B6ADD5A9EAE55A470 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				66875FBF6249D728A655CE04 /* Order.swift */,
+				113F522C16AB14F44066E42C /* OrderItem.swift */,
+				C038CD06B6B7982129D0ACF7 /* OrderRepository.swift */,
+				6FC31E5008CF4D2305838322 /* PaymentRepository.swift */,
+				D82F15A7251C20869DE44DDE /* PlaceOrderUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		611747A6C516F1609F682C9C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A22DB02ACEB535954F0AFDD6 /* FetchLoyaltyUseCase.swift */,
+				01A350B9781E915209692C70 /* LoyaltyAccount.swift */,
+				EAD77958E20C8AF8E8EC1EA6 /* LoyaltyRepository.swift */,
+				661858F2DE074F7E30E54351 /* RedeemRewardUseCase.swift */,
+				BF40AC733A2BC5BBB35884D6 /* Reward.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7B3E2D9A224F5964067C5FB0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6CA8334FFBEC8D8B8ECD06B3 /* CafeAppApp.swift */,
+				19ECA8750DE1F56CF4715D09 /* Config.swift */,
+				33326DFE478507F618D2BBE6 /* DependencyContainer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		86332B78FB02A84D8968FAD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DED3634F657F78DE09CAB17 /* CafeApp.app */,
+				E0B795A204DDF2F2107F256F /* CafeAppIntegrationTests.xctest */,
+				0964E99DF9BC260ED7226BDF /* CafeAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B4E62A7FB72D7CF005CDE91 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				13A24553903DC876602136E4 /* WorkerDashboardView.swift */,
+				8DF3524E90E517E4B8B47278 /* WorkerOrderDetailView.swift */,
+				1CD26AEB8E0A2ECCFCED1290 /* WorkerOrderViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8C063774F807643A3F977B53 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A27E137B2AD8404C4B2C0913 /* FCMNotificationRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		91F97E70A617E5D85E8B1A09 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1E35C773ABBEEA938CA45AD0 /* FirebaseMenuRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9F0DB860BB2D066E1954FA6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A936A6AFC98990138EDBD09 /* Pods-CafeApp.debug.xcconfig */,
+				A48C011794D104E339668EE7 /* Pods-CafeApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B49ECB8BAFB8B97FC046B6E1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E9863AC9AC4DAE6E7E6F7F09 /* FirebaseAuthRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B87A7BD446B98BC730076E21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845ACB4508D2F10B7323143A /* Pods_CafeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9176901D683B46AAAFA33F1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				41227B86E668FB1947BE94FE /* BarcodeView.swift */,
+				24F7DD995F71BF28F7DDAF3D /* LoyaltyViewModel.swift */,
+				9128CFDE8D900A961E88AA07 /* NotificationSettingsView.swift */,
+				9D2FF2570AA22B3A2C46736F /* ProfileView.swift */,
+				C5AE878AEC4BD03AB79999DC /* RewardsView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BA9BD0897DF3009233F64216 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B49ECB8BAFB8B97FC046B6E1 /* Data */,
+				C6D77DB8E72FF763B2F95909 /* Domain */,
+				4DECCFDE9269F4516602D0F7 /* Presentation */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BDC39217BB753C0E3D429479 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				660AB6D517F1937DFC04F80D /* FirebaseOrderRepository.swift */,
+				E9E5FF4DE438BBB032F95C17 /* SquareInAppPaymentRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BE223F0C22BDA6F7DD580830 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C16BA0805F9B5153136420E0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3553972416C2B95BA02EF361 /* FulfillOrderUseCase.swift */,
+				EDD6D34FF25752C80450BD96 /* WorkerOrderRepository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C30008AAFDD345CA9077AE18 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				125293E621BA2F24A623C129 /* CartView.swift */,
+				35D9F86012B88FD8DE7C81D2 /* CheckoutView.swift */,
+				6E59FEC4A9B19C9672BC8684 /* OrderConfirmationView.swift */,
+				828211CE24FB2C839EAEB47B /* OrderTrackingView.swift */,
+				5C09F14009C59974D72B0F80 /* OrderViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C4E8C7EFDCC7EEF37E350DB2 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				8C063774F807643A3F977B53 /* Data */,
+				10B290709B8119FCE7BD37BB /* Domain */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		C6D77DB8E72FF763B2F95909 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				88269F58D49C561CCA56E203 /* AuthRepository.swift */,
+				A85182F9A6379258F31067E3 /* AuthUser.swift */,
+				01E5937F2FD292AF1915F0E7 /* RegisterUseCase.swift */,
+				022C25431036C3FAD1E1393E /* SignInUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CB26CC8954EFE4CD4ED60C42 /* CafeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE223F0C22BDA6F7DD580830 /* Features */,
+				50A20E72606D2865EA9EACFD /* Mocks */,
+			);
+			path = CafeAppTests;
+			sourceTree = "<group>";
+		};
+		D013DBBF4EFFCCC8AFAA2535 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				BAE219CE416057EDF872B789 /* KeychainManager.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		D09CB6651503ACB79AE43AB5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				695F6F273F3B0FA7E3214F0B /* FetchMenuUseCase.swift */,
+				7F33B0B5DF85204169A561C5 /* MenuItem.swift */,
+				3406422076E5627C910F9B99 /* MenuRepository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DCD707551781609E33F25957 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				8CB119C02F6E4ECBA4785414 /* FirebaseLoyaltyRepositoryTests.swift */,
+				20635FA61B50B9ABCF116E77 /* FirebaseMenuRepositoryTests.swift */,
+				3A73F68EFE5D78AEE86D69F3 /* FirebaseOrderRepositoryTests.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F1311FC46016DAF85EF20429 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BA9BD0897DF3009233F64216 /* Auth */,
+				471CDE9F32D3DC557AD85AB9 /* Loyalty */,
+				1F6FDAAC24A5669B91E3E9D3 /* Menu */,
+				C4E8C7EFDCC7EEF37E350DB2 /* Notifications */,
+				36E8D2FC8C1171A23C63FBA2 /* Orders */,
+				F7EA381D7E690DA42E0AFEAD /* Worker */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F7EA381D7E690DA42E0AFEAD /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				5F8D2F7DD26F42C58804DA38 /* Data */,
+				C16BA0805F9B5153136420E0 /* Domain */,
+				8B4E62A7FB72D7CF005CDE91 /* Presentation */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		F920E03EB8A8E0C560F4E467 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				10C008160F20A10946A2F67E /* CafeConfig */,
+				568D2AA7069277446FF5211D /* Extensions */,
+				2B0139DC4A8EB68F0C2235B2 /* Network */,
+				D013DBBF4EFFCCC8AFAA2535 /* Security */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1912E15B48813F46F004D916 /* CafeAppIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4593CBF5BE46885D8232F63A /* Build configuration list for PBXNativeTarget "CafeAppIntegrationTests" */;
+			buildPhases = (
+				CB1252250EF3331B70EB6F2E /* Sources */,
+				5A768E77E88DAB62990A1377 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D00981D9C1B49D8C28CFCA9 /* PBXTargetDependency */,
+			);
+			name = CafeAppIntegrationTests;
+			packageProductDependencies = (
+				E179B6204A571738E3EBEB7E /* FirebaseAuth */,
+				A52B86CECAD4D7F14B85BA28 /* FirebaseFirestore */,
+			);
+			productName = CafeAppIntegrationTests;
+			productReference = E0B795A204DDF2F2107F256F /* CafeAppIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		867A302C0A1266C0446B3437 /* CafeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01EC4EDFFC1F023500A4FC82 /* Build configuration list for PBXNativeTarget "CafeApp" */;
+			buildPhases = (
+				2A15B0EC18533E74DB65602D /* [CP] Check Pods Manifest.lock */,
+				7AFDEF13C0E9E307B21E2139 /* Sources */,
+				1623ECD4744760E577245885 /* Resources */,
+				C4C424E9D8262D6F18BAED63 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CafeApp;
+			packageProductDependencies = (
+				CDF6DC218030C874F8B0FDF3 /* FirebaseAuth */,
+				C612628AE9ADC675C5A9F626 /* FirebaseFirestore */,
+				73605C5431C8F1084214E735 /* FirebaseMessaging */,
+			);
+			productName = CafeApp;
+			productReference = 8DED3634F657F78DE09CAB17 /* CafeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A29531A305F5BADA2FD7B6A8 /* CafeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37A7341F372C49E5D759F9BF /* Build configuration list for PBXNativeTarget "CafeAppTests" */;
+			buildPhases = (
+				60981780F944B5E885B1721A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79928F6D816D62329E99E12 /* PBXTargetDependency */,
+			);
+			name = CafeAppTests;
+			productName = CafeAppTests;
+			productReference = 0964E99DF9BC260ED7226BDF /* CafeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18B5369C72CF75B016529763 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					867A302C0A1266C0446B3437 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 16BF87C0AA6A7BAFE9AEB12C /* Build configuration list for PBXProject "CafeApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3E47CDFC05F8CFBF6D18ED91;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 86332B78FB02A84D8968FAD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				867A302C0A1266C0446B3437 /* CafeApp */,
+				1912E15B48813F46F004D916 /* CafeAppIntegrationTests */,
+				A29531A305F5BADA2FD7B6A8 /* CafeAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1623ECD4744760E577245885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F048F3DAA233912332CE8470 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A15B0EC18533E74DB65602D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60981780F944B5E885B1721A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF44DBECA978B040D68909AF /* DependencyContainer+Mock.swift in Sources */,
+				1A524D1A7DA7BBB8A451601F /* MockAuthRepository.swift in Sources */,
+				DD2B92B5A415ED9FC32E1587 /* MockCafeConfigRepository.swift in Sources */,
+				BEF5D7E5AAC7E33693AC0D9F /* MockLoyaltyRepository.swift in Sources */,
+				FA6E2D964A74377F02B4DE90 /* MockMenuRepository.swift in Sources */,
+				783AA49B3BEE77318B9A4775 /* MockNetworkMonitorRepository.swift in Sources */,
+				ED7342FFA456D55DAA75B041 /* MockNotificationRepository.swift in Sources */,
+				513FA3FE0F292B64D45C28B0 /* MockOrderRepository.swift in Sources */,
+				8E0A7453068D1847B91B80ED /* MockPaymentRepository.swift in Sources */,
+				B8F9DD4DF646238178A49F44 /* MockWorkerOrderRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AFDEF13C0E9E307B21E2139 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB2EABDBA609930183BE307 /* AuthRepository.swift in Sources */,
+				3DCFCD98218D73897A1DBE3F /* AuthUser.swift in Sources */,
+				9969B31683141232B7CF3C6B /* AuthViewModel.swift in Sources */,
+				C1CD74F57367665AB331C97E /* BarcodeView.swift in Sources */,
+				CCEB52E042963F3E88DE3F65 /* CafeAppApp.swift in Sources */,
+				F47A372757268160C9B267A4 /* CafeConfig.swift in Sources */,
+				63D70D5502DD0ED976A8C539 /* CafeConfigRepository.swift in Sources */,
+				980DBB1FB3464998BF8C11BE /* CartView.swift in Sources */,
+				18DEE7D96694D616D6EE4E65 /* CheckoutView.swift in Sources */,
+				F34DDF56C13B911DB9CCABFE /* Config.swift in Sources */,
+				192E2463423C3D5B199915D7 /* Date+CafeHours.swift in Sources */,
+				CF8BED19FF6FC739C1F1A767 /* DependencyContainer.swift in Sources */,
+				7591AAB13F72AE960DA8762A /* FCMNotificationRepository.swift in Sources */,
+				11899AFC6DC748D3CD82518D /* FetchLoyaltyUseCase.swift in Sources */,
+				D91727085C362F5511968438 /* FetchMenuUseCase.swift in Sources */,
+				F26A893FFC793ABBD38BEC7B /* FirebaseAuthRepository.swift in Sources */,
+				174F4520557CB814AA7C3EAE /* FirebaseCafeConfigRepository.swift in Sources */,
+				D5B34F8B2A5444924E14F403 /* FirebaseLoyaltyRepository.swift in Sources */,
+				C7723964384EFEFCF0C24E59 /* FirebaseMenuRepository.swift in Sources */,
+				EA1AC1DA3C424F4A60B03E01 /* FirebaseOrderRepository.swift in Sources */,
+				F74C2B3FCD1B2A13C2C7E1B6 /* FirebaseWorkerOrderRepository.swift in Sources */,
+				D6F00638E1CCA7B5F9CD6126 /* FulfillOrderUseCase.swift in Sources */,
+				30CDC723C0BED0B8160694F9 /* KeychainManager.swift in Sources */,
+				22D27AD99627B771BC72238B /* LoginView.swift in Sources */,
+				D01A6F9F9E8BAD3A7C04653B /* LoyaltyAccount.swift in Sources */,
+				1CE65F96C8B6213DAC18A0E5 /* LoyaltyRepository.swift in Sources */,
+				A921BA3F1591FD3CB745CB91 /* LoyaltyViewModel.swift in Sources */,
+				85BCF25AD1539A660E8ACC31 /* MenuItem.swift in Sources */,
+				5856F5447F8A75BD2314640E /* MenuItemDetailView.swift in Sources */,
+				DDAA35D8244E6226FEEE456A /* MenuRepository.swift in Sources */,
+				160B1FFA3E26F1DDE8CEF9A6 /* MenuView.swift in Sources */,
+				E269A13309D20DDA1C5A0064 /* MenuViewModel.swift in Sources */,
+				59C9B638517872B6BD6C36EA /* NWNetworkMonitor.swift in Sources */,
+				56CEDAEBF290BD59CC65873D /* NetworkMonitorRepository.swift in Sources */,
+				6CB2C27005208E18293EEBB2 /* NotificationRepository.swift in Sources */,
+				9C17DC042177CDDCB3D1E256 /* NotificationSettingsView.swift in Sources */,
+				54F02EFB8B1BC6BA95C13532 /* Order.swift in Sources */,
+				E13347F127A54FA4FC94DB55 /* OrderConfirmationView.swift in Sources */,
+				DEBEDC2BFB9F7F43DF0DD0C1 /* OrderItem.swift in Sources */,
+				648323A4EE3ABED124B30CB1 /* OrderRepository.swift in Sources */,
+				65F8CF96FCD0371A58B3E11E /* OrderTrackingView.swift in Sources */,
+				2C1D03302CB2EAACFE3A6A68 /* OrderViewModel.swift in Sources */,
+				EFE73AE4EE856DD8E5D2B4C6 /* PaymentRepository.swift in Sources */,
+				DB333C95DB21001973DD5927 /* PlaceOrderUseCase.swift in Sources */,
+				B47D522A9FCB7456C64FACAF /* ProfileView.swift in Sources */,
+				9F18C4762AF3050383A20D36 /* RedeemRewardUseCase.swift in Sources */,
+				9291442BAB7D57259753B0F2 /* RegisterNotificationUseCase.swift in Sources */,
+				1537F64AF31AB59B784C9649 /* RegisterUseCase.swift in Sources */,
+				03EC4CDB2A752EE7AD39E5FE /* RegisterView.swift in Sources */,
+				B225B4856B7B45CF5CAE3D45 /* Reward.swift in Sources */,
+				8E53E4135DDE7A3577E4DBF1 /* RewardsView.swift in Sources */,
+				EFDAC5AE183859107E8B79EE /* SignInUseCase.swift in Sources */,
+				5A235D8B6627222955291E0A /* SquareInAppPaymentRepository.swift in Sources */,
+				3CA77DAE7FBDB89B91DE22AA /* WorkerDashboardView.swift in Sources */,
+				9390C171562D05BA37C541B2 /* WorkerOrderDetailView.swift in Sources */,
+				2CC17CD6F7A40B5C2459E981 /* WorkerOrderRepository.swift in Sources */,
+				D5BA705A4D8E96B9EF97E365 /* WorkerOrderViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB1252250EF3331B70EB6F2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDB99E80011C2E294C55A31 /* FirebaseLoyaltyRepositoryTests.swift in Sources */,
+				D4AE038CA3C2BE7ADD16965B /* FirebaseMenuRepositoryTests.swift in Sources */,
+				2BF1921D2C98A02C3BDD0CCE /* FirebaseOrderRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D00981D9C1B49D8C28CFCA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867A302C0A1266C0446B3437 /* CafeApp */;
+			targetProxy = 0C467157687C6B7661117E6D /* PBXContainerItemProxy */;
+		};
+		D79928F6D816D62329E99E12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 867A302C0A1266C0446B3437 /* CafeApp */;
+			targetProxy = ABF7779D76AD67C873B04806 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A7258CDEC1F06AFCCE663F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cafeapp.CafeAppTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp.app/CafeApp";
+			};
+			name = Release;
+		};
+		271FB00DCB6018CA34BD53AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2E4B2316474648AA7D21E2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		63C88069AC4DCC60AC6D4A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A936A6AFC98990138EDBD09 /* Pods-CafeApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CafeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cafeapp.CafeApp;
+				SDKROOT = iphoneos;
+				SQUARE_APPLICATION_ID = "";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F30279466E04BC7B4B8DFE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cafeapp.CafeAppIntegrationTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp.app/CafeApp";
+			};
+			name = Release;
+		};
+		97952F0773C08CE55FCC27AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cafeapp.CafeAppIntegrationTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp.app/CafeApp";
+			};
+			name = Debug;
+		};
+		B449AF2169C83F96E135A838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48C011794D104E339668EE7 /* Pods-CafeApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CafeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cafeapp.CafeApp;
+				SDKROOT = iphoneos;
+				SQUARE_APPLICATION_ID = "";
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F8E4D0517B1DCD71570FAC5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cafeapp.CafeAppTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.10;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CafeApp.app/CafeApp";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01EC4EDFFC1F023500A4FC82 /* Build configuration list for PBXNativeTarget "CafeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C88069AC4DCC60AC6D4A90 /* Debug */,
+				B449AF2169C83F96E135A838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		16BF87C0AA6A7BAFE9AEB12C /* Build configuration list for PBXProject "CafeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				271FB00DCB6018CA34BD53AE /* Debug */,
+				2E4B2316474648AA7D21E2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		37A7341F372C49E5D759F9BF /* Build configuration list for PBXNativeTarget "CafeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8E4D0517B1DCD71570FAC5B /* Debug */,
+				0A7258CDEC1F06AFCCE663F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4593CBF5BE46885D8232F63A /* Build configuration list for PBXNativeTarget "CafeAppIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97952F0773C08CE55FCC27AE /* Debug */,
+				7F30279466E04BC7B4B8DFE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73605C5431C8F1084214E735 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		A52B86CECAD4D7F14B85BA28 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C612628AE9ADC675C5A9F626 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CDF6DC218030C874F8B0FDF3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E179B6204A571738E3EBEB7E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E41500B907540F4D5465AF3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 18B5369C72CF75B016529763 /* Project object */;
+}
