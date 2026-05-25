@@ -77,6 +77,7 @@ final class FirebaseWorkerOrderRepository: WorkerOrderRepository {
                 specialInstructions: d["specialInstructions"] as? String,
                 pointValue: d["pointValue"] as? Int ?? 0,
                 price: d["price"] as? Double ?? 0,
+                quantity: d["quantity"] as? Int ?? 1,
                 isCheckedOff: d["isCheckedOff"] as? Bool ?? false
             )
         }

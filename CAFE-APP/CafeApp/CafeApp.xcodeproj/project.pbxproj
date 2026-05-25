@@ -18,9 +18,9 @@
 		1CE65F96C8B6213DAC18A0E5 /* LoyaltyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD77958E20C8AF8E8EC1EA6 /* LoyaltyRepository.swift */; };
 		22D27AD99627B771BC72238B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35B2B0B778917D0F4042D1 /* LoginView.swift */; };
 		2BF1921D2C98A02C3BDD0CCE /* FirebaseOrderRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73F68EFE5D78AEE86D69F3 /* FirebaseOrderRepositoryTests.swift */; };
-		2BFAB0C928D15B15581FCB28 /* Pods_CafeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845ACB4508D2F10B7323143A /* Pods_CafeApp.framework */; };
 		2C1D03302CB2EAACFE3A6A68 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C09F14009C59974D72B0F80 /* OrderViewModel.swift */; };
 		2CC17CD6F7A40B5C2459E981 /* WorkerOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD6D34FF25752C80450BD96 /* WorkerOrderRepository.swift */; };
+		2F7436581BF388A958BDA96D /* OwnerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F3362265A820A2509AEC4 /* OwnerMenuView.swift */; };
 		2FB2EABDBA609930183BE307 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88269F58D49C561CCA56E203 /* AuthRepository.swift */; };
 		30CDC723C0BED0B8160694F9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE219CE416057EDF872B789 /* KeychainManager.swift */; };
 		3CA77DAE7FBDB89B91DE22AA /* WorkerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A24553903DC876602136E4 /* WorkerDashboardView.swift */; };
@@ -28,6 +28,7 @@
 		4394A6425DBE0CBFB2C39C6B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C612628AE9ADC675C5A9F626 /* FirebaseFirestore */; };
 		4DDB99E80011C2E294C55A31 /* FirebaseLoyaltyRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB119C02F6E4ECBA4785414 /* FirebaseLoyaltyRepositoryTests.swift */; };
 		513FA3FE0F292B64D45C28B0 /* MockOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942429C1251B4F2C8A5D08FC /* MockOrderRepository.swift */; };
+		545804A5201ED639BE8AFA0F /* MenuItemFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564FE0FFDE7B372E25A183A3 /* MenuItemFormView.swift */; };
 		54F02EFB8B1BC6BA95C13532 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66875FBF6249D728A655CE04 /* Order.swift */; };
 		56CEDAEBF290BD59CC65873D /* NetworkMonitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7BE98264BDC3F8C7C69AFE /* NetworkMonitorRepository.swift */; };
 		5856F5447F8A75BD2314640E /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5EB9CB8379C5D177ADDA5 /* MenuItemDetailView.swift */; };
@@ -38,6 +39,7 @@
 		65F8CF96FCD0371A58B3E11E /* OrderTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828211CE24FB2C839EAEB47B /* OrderTrackingView.swift */; };
 		6CB2C27005208E18293EEBB2 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E6A0A8DE3F70AC5F2509FF /* NotificationRepository.swift */; };
 		7591AAB13F72AE960DA8762A /* FCMNotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E137B2AD8404C4B2C0913 /* FCMNotificationRepository.swift */; };
+		75B09F7A609878FABF28537E /* OwnerDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4011A9AA3EDF557E6A829 /* OwnerDashboardView.swift */; };
 		783AA49B3BEE77318B9A4775 /* MockNetworkMonitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501F9B496FB60C40344E18B6 /* MockNetworkMonitorRepository.swift */; };
 		85BCF25AD1539A660E8ACC31 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33B0B5DF85204169A561C5 /* MenuItem.swift */; };
 		8E0A7453068D1847B91B80ED /* MockPaymentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326BCD4CA21381C52D6054A /* MockPaymentRepository.swift */; };
@@ -45,6 +47,7 @@
 		920E2981E215249B29786CE7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 73605C5431C8F1084214E735 /* FirebaseMessaging */; };
 		9291442BAB7D57259753B0F2 /* RegisterNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40A332ACDC6D24248ED88B /* RegisterNotificationUseCase.swift */; };
 		9390C171562D05BA37C541B2 /* WorkerOrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF3524E90E517E4B8B47278 /* WorkerOrderDetailView.swift */; };
+		965185617DE9126D3114422E /* OwnerMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674E6BE1AA25FE2027C26F8 /* OwnerMenuViewModel.swift */; };
 		980DBB1FB3464998BF8C11BE /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125293E621BA2F24A623C129 /* CartView.swift */; };
 		9969B31683141232B7CF3C6B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503205640D4D28AD5F634F3F /* AuthViewModel.swift */; };
 		9C17DC042177CDDCB3D1E256 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9128CFDE8D900A961E88AA07 /* NotificationSettingsView.swift */; };
@@ -54,6 +57,7 @@
 		B225B4856B7B45CF5CAE3D45 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40AC733A2BC5BBB35884D6 /* Reward.swift */; };
 		B47D522A9FCB7456C64FACAF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2FF2570AA22B3A2C46736F /* ProfileView.swift */; };
 		B8F9DD4DF646238178A49F44 /* MockWorkerOrderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439EE02C3E29D8D6B52B9111 /* MockWorkerOrderRepository.swift */; };
+		BB4680612FC4626000EF243F /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46805F2FC4626000EF243F /* DS.swift */; };
 		BEF5D7E5AAC7E33693AC0D9F /* MockLoyaltyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C68DD316CA0685FEFB03A0A /* MockLoyaltyRepository.swift */; };
 		C1CD74F57367665AB331C97E /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41227B86E668FB1947BE94FE /* BarcodeView.swift */; };
 		C7723964384EFEFCF0C24E59 /* FirebaseMenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35C773ABBEEA938CA45AD0 /* FirebaseMenuRepository.swift */; };
@@ -125,13 +129,14 @@
 		3553972416C2B95BA02EF361 /* FulfillOrderUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FulfillOrderUseCase.swift; sourceTree = "<group>"; };
 		35D9F86012B88FD8DE7C81D2 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		3A73F68EFE5D78AEE86D69F3 /* FirebaseOrderRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOrderRepositoryTests.swift; sourceTree = "<group>"; };
-		3A936A6AFC98990138EDBD09 /* Pods-CafeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp.debug.xcconfig"; path = "Target Support Files/Pods-CafeApp/Pods-CafeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3C68DD316CA0685FEFB03A0A /* MockLoyaltyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoyaltyRepository.swift; sourceTree = "<group>"; };
 		41227B86E668FB1947BE94FE /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
 		42772345339E16A455DE893B /* DependencyContainer+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DependencyContainer+Mock.swift"; sourceTree = "<group>"; };
 		439EE02C3E29D8D6B52B9111 /* MockWorkerOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWorkerOrderRepository.swift; sourceTree = "<group>"; };
+		4FD4011A9AA3EDF557E6A829 /* OwnerDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerDashboardView.swift; sourceTree = "<group>"; };
 		501F9B496FB60C40344E18B6 /* MockNetworkMonitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkMonitorRepository.swift; sourceTree = "<group>"; };
 		503205640D4D28AD5F634F3F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		564FE0FFDE7B372E25A183A3 /* MenuItemFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemFormView.swift; sourceTree = "<group>"; };
 		57E6A0A8DE3F70AC5F2509FF /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		59D7E680F01B6E37C403802E /* MockAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthRepository.swift; sourceTree = "<group>"; };
 		5C09F14009C59974D72B0F80 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 		66875FBF6249D728A655CE04 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		695F6F273F3B0FA7E3214F0B /* FetchMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMenuUseCase.swift; sourceTree = "<group>"; };
 		69824BF0648617459502B036 /* FirebaseCafeConfigRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCafeConfigRepository.swift; sourceTree = "<group>"; };
+		6C3F3362265A820A2509AEC4 /* OwnerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMenuView.swift; sourceTree = "<group>"; };
 		6CA8334FFBEC8D8B8ECD06B3 /* CafeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeAppApp.swift; sourceTree = "<group>"; };
 		6E59FEC4A9B19C9672BC8684 /* OrderConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationView.swift; sourceTree = "<group>"; };
 		6FC31E5008CF4D2305838322 /* PaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRepository.swift; sourceTree = "<group>"; };
@@ -150,7 +156,6 @@
 		8009ACD509EFA2F0E4345B8A /* CafeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeConfig.swift; sourceTree = "<group>"; };
 		828211CE24FB2C839EAEB47B /* OrderTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingView.swift; sourceTree = "<group>"; };
 		82F3196A3F30A8B0403D1017 /* FirebaseLoyaltyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoyaltyRepository.swift; sourceTree = "<group>"; };
-		845ACB4508D2F10B7323143A /* Pods_CafeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88269F58D49C561CCA56E203 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		8CB119C02F6E4ECBA4785414 /* FirebaseLoyaltyRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoyaltyRepositoryTests.swift; sourceTree = "<group>"; };
 		8DED3634F657F78DE09CAB17 /* CafeApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,12 +167,12 @@
 		9F35B2B0B778917D0F4042D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A22DB02ACEB535954F0AFDD6 /* FetchLoyaltyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLoyaltyUseCase.swift; sourceTree = "<group>"; };
 		A27E137B2AD8404C4B2C0913 /* FCMNotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMNotificationRepository.swift; sourceTree = "<group>"; };
-		A48C011794D104E339668EE7 /* Pods-CafeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeApp.release.xcconfig"; path = "Target Support Files/Pods-CafeApp/Pods-CafeApp.release.xcconfig"; sourceTree = "<group>"; };
 		A55811DA67531F89BB23C1B3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A85182F9A6379258F31067E3 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		AC461482B8CB74D562C1E84B /* Date+CafeHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CafeHours.swift"; sourceTree = "<group>"; };
 		AE7BE98264BDC3F8C7C69AFE /* NetworkMonitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorRepository.swift; sourceTree = "<group>"; };
 		BAE219CE416057EDF872B789 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		BB46805F2FC4626000EF243F /* DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
 		BF40AC733A2BC5BBB35884D6 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		C038CD06B6B7982129D0ACF7 /* OrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepository.swift; sourceTree = "<group>"; };
 		C18EEDAB5A9E6D2DF44DA0F1 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 		E9E5FF4DE438BBB032F95C17 /* SquareInAppPaymentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareInAppPaymentRepository.swift; sourceTree = "<group>"; };
 		EAD77958E20C8AF8E8EC1EA6 /* LoyaltyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyRepository.swift; sourceTree = "<group>"; };
 		EDD6D34FF25752C80450BD96 /* WorkerOrderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerOrderRepository.swift; sourceTree = "<group>"; };
+		F674E6BE1AA25FE2027C26F8 /* OwnerMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerMenuViewModel.swift; sourceTree = "<group>"; };
 		F6E32CD2714C2D35183E8764 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,7 +207,6 @@
 				EEB5DF3BAFC0C8C514CD4718 /* FirebaseAuth in Frameworks */,
 				4394A6425DBE0CBFB2C39C6B /* FirebaseFirestore in Frameworks */,
 				920E2981E215249B29786CE7 /* FirebaseMessaging in Frameworks */,
-				2BFAB0C928D15B15581FCB28 /* Pods_CafeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +306,6 @@
 				08A050CA36472D52770CD38C /* CafeAppIntegrationTests */,
 				CB26CC8954EFE4CD4ED60C42 /* CafeAppTests */,
 				86332B78FB02A84D8968FAD9 /* Products */,
-				9F0DB860BB2D066E1954FA6D /* Pods */,
-				B87A7BD446B98BC730076E21 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -406,6 +409,10 @@
 		8B4E62A7FB72D7CF005CDE91 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				564FE0FFDE7B372E25A183A3 /* MenuItemFormView.swift */,
+				4FD4011A9AA3EDF557E6A829 /* OwnerDashboardView.swift */,
+				6C3F3362265A820A2509AEC4 /* OwnerMenuView.swift */,
+				F674E6BE1AA25FE2027C26F8 /* OwnerMenuViewModel.swift */,
 				13A24553903DC876602136E4 /* WorkerDashboardView.swift */,
 				8DF3524E90E517E4B8B47278 /* WorkerOrderDetailView.swift */,
 				1CD26AEB8E0A2ECCFCED1290 /* WorkerOrderViewModel.swift */,
@@ -429,30 +436,12 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		9F0DB860BB2D066E1954FA6D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3A936A6AFC98990138EDBD09 /* Pods-CafeApp.debug.xcconfig */,
-				A48C011794D104E339668EE7 /* Pods-CafeApp.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		B49ECB8BAFB8B97FC046B6E1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				E9863AC9AC4DAE6E7E6F7F09 /* FirebaseAuthRepository.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		B87A7BD446B98BC730076E21 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				845ACB4508D2F10B7323143A /* Pods_CafeApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B9176901D683B46AAAFA33F1 /* Presentation */ = {
@@ -475,6 +464,14 @@
 				4DECCFDE9269F4516602D0F7 /* Presentation */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		BB4680602FC4626000EF243F /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				BB46805F2FC4626000EF243F /* DS.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		BDC39217BB753C0E3D429479 /* Data */ = {
@@ -597,6 +594,7 @@
 		F920E03EB8A8E0C560F4E467 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BB4680602FC4626000EF243F /* DesignSystem */,
 				10C008160F20A10946A2F67E /* CafeConfig */,
 				568D2AA7069277446FF5211D /* Extensions */,
 				2B0139DC4A8EB68F0C2235B2 /* Network */,
@@ -633,7 +631,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01EC4EDFFC1F023500A4FC82 /* Build configuration list for PBXNativeTarget "CafeApp" */;
 			buildPhases = (
-				2A15B0EC18533E74DB65602D /* [CP] Check Pods Manifest.lock */,
 				7AFDEF13C0E9E307B21E2139 /* Sources */,
 				1623ECD4744760E577245885 /* Resources */,
 				C4C424E9D8262D6F18BAED63 /* Frameworks */,
@@ -664,6 +661,8 @@
 				D79928F6D816D62329E99E12 /* PBXTargetDependency */,
 			);
 			name = CafeAppTests;
+			packageProductDependencies = (
+			);
 			productName = CafeAppTests;
 			productReference = 0964E99DF9BC260ED7226BDF /* CafeAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -717,31 +716,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2A15B0EC18533E74DB65602D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CafeApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		60981780F944B5E885B1721A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -793,6 +767,7 @@
 				A921BA3F1591FD3CB745CB91 /* LoyaltyViewModel.swift in Sources */,
 				85BCF25AD1539A660E8ACC31 /* MenuItem.swift in Sources */,
 				5856F5447F8A75BD2314640E /* MenuItemDetailView.swift in Sources */,
+				545804A5201ED639BE8AFA0F /* MenuItemFormView.swift in Sources */,
 				DDAA35D8244E6226FEEE456A /* MenuRepository.swift in Sources */,
 				160B1FFA3E26F1DDE8CEF9A6 /* MenuView.swift in Sources */,
 				E269A13309D20DDA1C5A0064 /* MenuViewModel.swift in Sources */,
@@ -806,6 +781,9 @@
 				648323A4EE3ABED124B30CB1 /* OrderRepository.swift in Sources */,
 				65F8CF96FCD0371A58B3E11E /* OrderTrackingView.swift in Sources */,
 				2C1D03302CB2EAACFE3A6A68 /* OrderViewModel.swift in Sources */,
+				75B09F7A609878FABF28537E /* OwnerDashboardView.swift in Sources */,
+				2F7436581BF388A958BDA96D /* OwnerMenuView.swift in Sources */,
+				965185617DE9126D3114422E /* OwnerMenuViewModel.swift in Sources */,
 				EFE73AE4EE856DD8E5D2B4C6 /* PaymentRepository.swift in Sources */,
 				DB333C95DB21001973DD5927 /* PlaceOrderUseCase.swift in Sources */,
 				B47D522A9FCB7456C64FACAF /* ProfileView.swift in Sources */,
@@ -818,6 +796,7 @@
 				EFDAC5AE183859107E8B79EE /* SignInUseCase.swift in Sources */,
 				5A235D8B6627222955291E0A /* SquareInAppPaymentRepository.swift in Sources */,
 				3CA77DAE7FBDB89B91DE22AA /* WorkerDashboardView.swift in Sources */,
+				BB4680612FC4626000EF243F /* DS.swift in Sources */,
 				9390C171562D05BA37C541B2 /* WorkerOrderDetailView.swift in Sources */,
 				2CC17CD6F7A40B5C2459E981 /* WorkerOrderRepository.swift in Sources */,
 				D5BA705A4D8E96B9EF97E365 /* WorkerOrderViewModel.swift in Sources */,
@@ -989,7 +968,6 @@
 		};
 		63C88069AC4DCC60AC6D4A90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A936A6AFC98990138EDBD09 /* Pods-CafeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1046,7 +1024,6 @@
 		};
 		B449AF2169C83F96E135A838 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A48C011794D104E339668EE7 /* Pods-CafeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -25,6 +25,7 @@ final class FirebaseOrderRepositoryTests: XCTestCase {
             specialInstructions: nil,
             pointValue: 5,
             price: 3.25,
+            quantity: 1,
             isCheckedOff: false
         )
 
@@ -54,6 +55,7 @@ final class FirebaseOrderRepositoryTests: XCTestCase {
             specialInstructions: nil,
             pointValue: 5,
             price: 3.25,
+            quantity: 1,
             isCheckedOff: false
         )
 

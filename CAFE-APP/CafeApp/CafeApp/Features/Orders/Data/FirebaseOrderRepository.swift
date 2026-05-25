@@ -24,6 +24,7 @@ final class FirebaseOrderRepository: OrderRepository {
                 "name": item.name,
                 "pointValue": item.pointValue,
                 "price": item.price,
+                "quantity": item.quantity,
                 "isCheckedOff": false
             ]
             if let size = item.size { d["size"] = size }
@@ -36,8 +37,8 @@ final class FirebaseOrderRepository: OrderRepository {
             "customerId": customerId,
             "customerName": customerName,
             "items": itemDocs,
-            "totalAmount": items.reduce(0) { $0 + $1.price },
-            "totalPointsEarned": items.reduce(0) { $0 + $1.pointValue },
+            "totalAmount": items.reduce(0) { $0 + $1.lineTotal },
+            "totalPointsEarned": items.reduce(0) { $0 + $1.linePoints },
             "status": OrderStatus.pending.rawValue,
             "requestedReadyTime": Timestamp(date: requestedReadyTime),
             "paymentReference": paymentReference,
@@ -52,8 +53,8 @@ final class FirebaseOrderRepository: OrderRepository {
             customerId: customerId,
             customerName: customerName,
             items: items,
-            totalAmount: items.reduce(0) { $0 + $1.price },
-            totalPointsEarned: items.reduce(0) { $0 + $1.pointValue },
+            totalAmount: items.reduce(0) { $0 + $1.lineTotal },
+            totalPointsEarned: items.reduce(0) { $0 + $1.linePoints },
             status: .pending,
             requestedReadyTime: requestedReadyTime,
             createdAt: now,
@@ -123,6 +124,7 @@ final class FirebaseOrderRepository: OrderRepository {
                 specialInstructions: d["specialInstructions"] as? String,
                 pointValue: d["pointValue"] as? Int ?? 0,
                 price: d["price"] as? Double ?? 0,
+                quantity: d["quantity"] as? Int ?? 1,
                 isCheckedOff: d["isCheckedOff"] as? Bool ?? false
             )
         }

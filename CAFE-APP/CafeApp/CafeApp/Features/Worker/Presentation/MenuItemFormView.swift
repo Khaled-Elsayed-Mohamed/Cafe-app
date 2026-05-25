@@ -15,6 +15,7 @@ struct MenuItemFormView: View {
     @State private var isAvailable = true
     @State private var isAppOnly = false
     @State private var allergens = ""
+    @State private var sizeDrafts: [SizeDraft] = []
     @State private var isSaving = false
 
     var title: String { existing == nil ? "Add Item" : "Edit Item" }
@@ -33,12 +34,44 @@ struct MenuItemFormView: View {
                 }
 
                 Section("Pricing") {
-                    TextField("In-Store Price", text: $inStorePrice)
-                        .keyboardType(.decimalPad)
-                    TextField("App Price (optional)", text: $appPrice)
-                        .keyboardType(.decimalPad)
-                    TextField("Loyalty Points", text: $pointValue)
-                        .keyboardType(.numberPad)
+                    LabeledContent("Base Price") {
+                        TextField("e.g. 5.50", text: $inStorePrice)
+                            .keyboardType(.decimalPad)
+                            .multilineTextAlignment(.trailing)
+                    }
+                    LabeledContent("App Price") {
+                        TextField("optional", text: $appPrice)
+                            .keyboardType(.decimalPad)
+                            .multilineTextAlignment(.trailing)
+                    }
+                    LabeledContent("Loyalty Points") {
+                        TextField("e.g. 5", text: $pointValue)
+                            .keyboardType(.numberPad)
+                            .multilineTextAlignment(.trailing)
+                    }
+                }
+
+                Section {
+                    ForEach($sizeDrafts) { $draft in
+                        HStack(spacing: 12) {
+                            TextField("Size name", text: $draft.name)
+                                .frame(minWidth: 80)
+                            Divider()
+                            Text("$").foregroundStyle(.secondary)
+                            TextField("Price", text: $draft.price)
+                                .keyboardType(.decimalPad)
+                                .multilineTextAlignment(.trailing)
+                        }
+                    }
+                    .onDelete { sizeDrafts.remove(atOffsets: $0) }
+
+                    Button(action: addSize) {
+                        Label("Add Size", systemImage: "plus.circle")
+                    }
+                } header: {
+                    Text("Sizes")
+                } footer: {
+                    Text("If no sizes are added, the base price is used.")
                 }
 
                 Section("Options") {
@@ -73,10 +106,22 @@ struct MenuItemFormView: View {
         isAvailable = item.isAvailable
         isAppOnly = item.isAppOnly
         allergens = item.allergens.joined(separator: ", ")
+        sizeDrafts = item.sizes.map { SizeDraft(name: $0.name, price: String($0.price)) }
+    }
+
+    private func addSize() {
+        let defaultNames = ["Small", "Medium", "Large", "Regular", "Extra Large"]
+        let used = sizeDrafts.map(\.name)
+        let next = defaultNames.first { !used.contains($0) } ?? "Size \(sizeDrafts.count + 1)"
+        sizeDrafts.append(SizeDraft(name: next, price: inStorePrice))
     }
 
     private func submit() {
         guard let price = Double(inStorePrice) else { return }
+        let parsedSizes = sizeDrafts.compactMap { draft -> ItemSize? in
+            guard !draft.name.isEmpty, let p = Double(draft.price) else { return nil }
+            return ItemSize(name: draft.name, price: p)
+        }
         let item = MenuItem(
             id: existing?.id ?? UUID().uuidString,
             name: name.trimmingCharacters(in: .whitespaces),
@@ -87,7 +132,8 @@ struct MenuItemFormView: View {
             allergens: allergens.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) },
             pointValue: Int(pointValue) ?? 0,
             category: category,
-            isAvailable: isAvailable
+            isAvailable: isAvailable,
+            sizes: parsedSizes
         )
         isSaving = true
         Task {
@@ -95,4 +141,10 @@ struct MenuItemFormView: View {
             dismiss()
         }
     }
+}
+
+struct SizeDraft: Identifiable {
+    let id = UUID()
+    var name: String
+    var price: String
 }

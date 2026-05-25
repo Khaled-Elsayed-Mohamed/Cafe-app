@@ -60,7 +60,8 @@ final class FirebaseMenuRepository: MenuRepository {
             "allergens": item.allergens,
             "pointValue": item.pointValue,
             "category": item.category.rawValue,
-            "isAvailable": item.isAvailable
+            "isAvailable": item.isAvailable,
+            "sizes": item.sizes.map { ["name": $0.name, "price": $0.price] }
         ]
         if let appPrice = item.appPrice { data["appPrice"] = appPrice }
         try await db.collection("menu_items").document(item.id).setData(data)
@@ -85,6 +86,11 @@ final class FirebaseMenuRepository: MenuRepository {
         else {
             throw MenuError.decodingFailed
         }
+        let sizes: [ItemSize] = (data["sizes"] as? [[String: Any]] ?? []).compactMap { sizeMap in
+            guard let name = sizeMap["name"] as? String,
+                  let price = sizeMap["price"] as? Double else { return nil }
+            return ItemSize(name: name, price: price)
+        }
         return MenuItem(
             id: doc.documentID,
             name: name,
@@ -95,7 +101,8 @@ final class FirebaseMenuRepository: MenuRepository {
             allergens: allergens,
             pointValue: pointValue,
             category: category,
-            isAvailable: isAvailable
+            isAvailable: isAvailable,
+            sizes: sizes
         )
     }
 }

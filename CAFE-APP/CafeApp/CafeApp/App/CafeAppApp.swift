@@ -94,6 +94,7 @@ extension Notification.Name {
 struct RootView: View {
     let container: DependencyContainer
     @Binding var currentUser: AuthUser?
+    @State private var ownerCustomerMode = false
 
     var body: some View {
         Group {
@@ -111,15 +112,33 @@ struct RootView: View {
                         )
                     )
                 case .owner:
-                    OwnerDashboardView(
-                        workerOrderViewModel: WorkerOrderViewModel(
-                            fulfillOrderUseCase: FulfillOrderUseCase(
+                    if ownerCustomerMode {
+                        CustomerTabView(container: container, user: user)
+                            .overlay(alignment: .bottom) {
+                                Button(action: { ownerCustomerMode = false }) {
+                                    Label("Back to Owner View", systemImage: "arrow.uturn.backward")
+                                        .font(.subheadline.bold())
+                                        .padding(.horizontal, 20)
+                                        .padding(.vertical, 10)
+                                        .background(.ultraThinMaterial)
+                                        .clipShape(Capsule())
+                                        .shadow(radius: 4)
+                                }
+                                .padding(.bottom, 90)
+                            }
+                    } else {
+                        OwnerDashboardView(
+                            workerOrderViewModel: WorkerOrderViewModel(
+                                fulfillOrderUseCase: FulfillOrderUseCase(
+                                    repository: container.workerOrderRepository
+                                ),
                                 repository: container.workerOrderRepository
                             ),
-                            repository: container.workerOrderRepository
-                        ),
-                        menuRepository: container.menuRepository
-                    )
+                            menuRepository: container.menuRepository,
+                            onSignOut: { try? await container.authRepository.signOut() },
+                            onSwitchToCustomer: { ownerCustomerMode = true }
+                        )
+                    }
                 }
             } else {
                 LoginView(
@@ -137,23 +156,27 @@ struct CustomerTabView: View {
     let user: AuthUser
 
     @State private var orderViewModel: OrderViewModel?
+    @State private var selectedTab = 0
 
     var body: some View {
         Group {
             if let orderVM = orderViewModel {
-                TabView {
+                TabView(selection: $selectedTab) {
                     MenuView(
                         viewModel: MenuViewModel(
                             menuRepository: container.menuRepository,
                             networkMonitor: container.networkMonitorRepository,
                             cafeConfigRepository: container.cafeConfigRepository
                         ),
-                        orderViewModel: orderVM
+                        orderViewModel: orderVM,
+                        selectedTab: $selectedTab
                     )
                     .tabItem { Label("Menu", systemImage: "cup.and.saucer") }
+                    .tag(0)
 
                     CartView(orderViewModel: orderVM)
                         .tabItem { Label("Cart", systemImage: "cart") }
+                        .tag(1)
 
                     if let loyaltyRepo = container.loyaltyRepository {
                         ProfileView(
@@ -162,6 +185,7 @@ struct CustomerTabView: View {
                             onSignOut: { try? await container.authRepository.signOut() }
                         )
                         .tabItem { Label("Profile", systemImage: "person.circle") }
+                        .tag(2)
                     }
                 }
             } else {

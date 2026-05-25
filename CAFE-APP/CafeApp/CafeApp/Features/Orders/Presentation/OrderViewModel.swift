@@ -31,15 +31,32 @@ final class OrderViewModel {
         return Date().isWithinOrderingWindow(config: config)
     }
 
-    var cartTotal: Double { cart.reduce(0) { $0 + $1.price } }
-    var cartPoints: Int { cart.reduce(0) { $0 + $1.pointValue } }
+    var cartTotal: Double { cart.reduce(0) { $0 + $1.lineTotal } }
+    var cartPoints: Int { cart.reduce(0) { $0 + $1.linePoints } }
 
     func addToCart(_ item: OrderItem) {
-        cart.append(item)
+        if let idx = cart.firstIndex(where: {
+            $0.menuItemId == item.menuItemId &&
+            $0.size == item.size &&
+            $0.specialInstructions == item.specialInstructions
+        }) {
+            cart[idx].quantity += item.quantity
+        } else {
+            cart.append(item)
+        }
     }
 
     func removeFromCart(at offsets: IndexSet) {
         cart.remove(atOffsets: offsets)
+    }
+
+    func updateQuantity(at index: Int, quantity: Int) {
+        guard cart.indices.contains(index) else { return }
+        if quantity <= 0 {
+            cart.remove(at: index)
+        } else {
+            cart[index].quantity = quantity
+        }
     }
 
     func placeOrder(requestedTime: Date) async {

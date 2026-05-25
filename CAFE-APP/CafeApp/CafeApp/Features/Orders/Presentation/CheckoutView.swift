@@ -13,20 +13,27 @@ struct CheckoutView: View {
                     ForEach(Array(orderViewModel.cart.enumerated()), id: \.offset) { _, item in
                         HStack {
                             VStack(alignment: .leading) {
-                                Text(item.name).font(.subheadline)
+                                HStack(spacing: 4) {
+                                    if item.quantity > 1 {
+                                        Text("×\(item.quantity)")
+                                            .font(.caption.bold())
+                                            .foregroundStyle(.secondary)
+                                    }
+                                    Text(item.name).font(.subheadline)
+                                }
                                 if let size = item.size {
                                     Text(size).font(.caption).foregroundStyle(.secondary)
                                 }
                             }
                             Spacer()
-                            Text(item.price, format: .currency(code: "USD"))
+                            Text(item.lineTotal, format: .currency(code: "AUD"))
                                 .font(.subheadline)
                         }
                     }
                     HStack {
                         Text("Total").fontWeight(.semibold)
                         Spacer()
-                        Text(orderViewModel.cartTotal, format: .currency(code: "USD"))
+                        Text(orderViewModel.cartTotal, format: .currency(code: "AUD"))
                             .fontWeight(.semibold)
                     }
                 }
@@ -64,7 +71,7 @@ struct CheckoutView: View {
                         if orderViewModel.isLoading {
                             ProgressView().frame(maxWidth: .infinity)
                         } else {
-                            Label("Pay \(orderViewModel.cartTotal.formatted(.currency(code: "USD")))",
+                            Label("Pay \(orderViewModel.cartTotal.formatted(.currency(code: "AUD")))",
                                   systemImage: "creditcard")
                                 .frame(maxWidth: .infinity)
                         }

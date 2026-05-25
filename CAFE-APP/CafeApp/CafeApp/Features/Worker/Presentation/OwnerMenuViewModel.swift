@@ -53,7 +53,8 @@ final class OwnerMenuViewModel {
             allergens: item.allergens,
             pointValue: item.pointValue,
             category: item.category,
-            isAvailable: !item.isAvailable
+            isAvailable: !item.isAvailable,
+            sizes: item.sizes
         )
         await save(updated)
     }

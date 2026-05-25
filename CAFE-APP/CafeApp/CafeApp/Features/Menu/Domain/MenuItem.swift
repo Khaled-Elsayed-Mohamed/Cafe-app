@@ -1,5 +1,11 @@
 import Foundation
 
+struct ItemSize: Identifiable, Codable, Hashable {
+    var id: String { name }
+    let name: String
+    let price: Double
+}
+
 struct MenuItem: Identifiable, Codable {
     let id: String
     let name: String
@@ -11,6 +17,7 @@ struct MenuItem: Identifiable, Codable {
     let pointValue: Int
     let category: MenuCategory
     let isAvailable: Bool
+    let sizes: [ItemSize]
 }
 
 enum MenuCategory: String, CaseIterable, Codable {

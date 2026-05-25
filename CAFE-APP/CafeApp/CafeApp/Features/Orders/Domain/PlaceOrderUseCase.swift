@@ -27,10 +27,10 @@ struct PlaceOrderUseCase {
             throw OrderError.orderingWindowClosed
         }
 
-        let totalAmount = items.reduce(0.0) { $0 + $1.price }
+        let totalAmount = items.reduce(0.0) { $0 + $1.lineTotal }
         let paymentResult = try await paymentRepository.collectPayment(
             amount: totalAmount,
-            currency: "USD"
+            currency: "AUD"
         )
 
         switch paymentResult.status {

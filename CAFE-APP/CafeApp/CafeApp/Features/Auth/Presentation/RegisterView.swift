@@ -14,69 +14,129 @@ struct RegisterView: View {
 
     var body: some View {
         NavigationStack {
-            Form {
-                Section("Account Details") {
-                    TextField("Full Name", text: $displayName)
-                        .textContentType(.name)
+            ZStack {
+                Color.cream.ignoresSafeArea()
+                RadialGradient(
+                    colors: [Color.amberSoft, Color.amberSoft.opacity(0)],
+                    center: .init(x: 0.5, y: 0),
+                    startRadius: 0,
+                    endRadius: 240
+                )
+                .ignoresSafeArea()
 
-                    TextField("Email", text: $email)
-                        .textContentType(.emailAddress)
-                        .keyboardType(.emailAddress)
-                        .autocorrectionDisabled()
-                        .textInputAutocapitalization(.never)
-                }
+                ScrollView {
+                    VStack(spacing: 0) {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("Create account")
+                                .font(.serif(34))
+                                .foregroundStyle(Color.espresso)
+                            Text("Join Macchiato & Co loyalty rewards.")
+                                .font(.sans(14))
+                                .foregroundStyle(Color.bark)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, 24)
+                        .padding(.bottom, 36)
 
-                Section("Password") {
-                    SecureField("Password (6+ characters)", text: $password)
-                        .textContentType(.newPassword)
+                        VStack(spacing: 14) {
+                            regField("Full Name", text: $displayName, icon: "person", content: .name)
+                            regField("Email", text: $email, icon: "envelope", content: .emailAddress, keyboard: .emailAddress)
+                            regField("Password", text: $password, icon: "lock", content: .newPassword, secure: true)
+                            regField("Confirm Password", text: $confirmPassword, icon: "lock", content: .newPassword, secure: true)
 
-                    SecureField("Confirm Password", text: $confirmPassword)
-                        .textContentType(.newPassword)
+                            if passwordMismatch {
+                                HStack(spacing: 6) {
+                                    Image(systemName: "exclamationmark.circle")
+                                    Text("Passwords do not match.")
+                                }
+                                .font(.sans(13))
+                                .foregroundStyle(Color.cafeRed)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 4)
+                            }
 
-                    if passwordMismatch {
-                        Text("Passwords do not match.")
-                            .foregroundStyle(.red)
-                            .font(.footnote)
-                    }
-                }
+                            if let error = viewModel.errorMessage {
+                                Text(error)
+                                    .font(.sans(13))
+                                    .foregroundStyle(Color.cafeRed)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.horizontal, 4)
+                            }
 
-                if let error = viewModel.errorMessage {
-                    Section {
-                        Text(error)
-                            .foregroundStyle(.red)
-                            .font(.footnote)
-                    }
-                }
-
-                Section {
-                    Button(action: {
-                        Task {
-                            await viewModel.signUp(
-                                email: email,
-                                password: password,
-                                displayName: displayName
+                            Button {
+                                Task {
+                                    await viewModel.signUp(email: email, password: password, displayName: displayName)
+                                    if viewModel.currentUser != nil { dismiss() }
+                                }
+                            } label: {
+                                Group {
+                                    if viewModel.isLoading { ProgressView().tint(Color.cream) }
+                                    else { Text("Create account") }
+                                }
+                            }
+                            .buttonStyle(CTAButtonStyle())
+                            .disabled(
+                                displayName.isEmpty || email.isEmpty ||
+                                password.count < 6 || passwordMismatch || viewModel.isLoading
                             )
-                            if viewModel.currentUser != nil { dismiss() }
-                        }
-                    }) {
-                        if viewModel.isLoading {
-                            ProgressView().frame(maxWidth: .infinity)
-                        } else {
-                            Text("Create Account").frame(maxWidth: .infinity)
+                            .padding(.top, 12)
                         }
                     }
-                    .disabled(
-                        displayName.isEmpty || email.isEmpty ||
-                        password.count < 6 || passwordMismatch || viewModel.isLoading
-                    )
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 60)
                 }
             }
-            .navigationTitle("Create Account")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
+                        .foregroundStyle(Color.terra)
                 }
             }
         }
     }
+
+    @ViewBuilder
+    private func regField(
+        _ label: String,
+        text: Binding<String>,
+        icon: String,
+        content: TextContentType,
+        keyboard: UIKeyboardType = .default,
+        secure: Bool = false
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(label)
+                .font(.mono(10, weight: .regular))
+                .foregroundStyle(Color.bark)
+                .tracking(1.4)
+                .textCase(.uppercase)
+            HStack(spacing: 10) {
+                Image(systemName: icon)
+                    .font(.system(size: 15, weight: .light))
+                    .foregroundStyle(Color.inkMuted)
+                if secure {
+                    SecureField("", text: text)
+                        .font(.sans(16))
+                        .foregroundStyle(Color.espresso)
+                        .textContentType(content)
+                } else {
+                    TextField("", text: text)
+                        .font(.sans(16))
+                        .foregroundStyle(Color.espresso)
+                        .textContentType(content)
+                        .keyboardType(keyboard)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(content == .emailAddress ? .never : .words)
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 12)
+        .background(Color.white.opacity(0.65))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).strokeBorder(Color.cardBorder, lineWidth: 0.5))
+    }
 }
+
+private typealias TextContentType = UITextContentType
